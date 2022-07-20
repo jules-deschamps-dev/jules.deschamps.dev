@@ -1,0 +1,37 @@
+.container{
+  display: flex;
+  h1{
+    font-family: capriola;
+    animation-name: comeToLeft, fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .bio-paragraph{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 10%;
+    margin: auto;
+    margin-left: 0;
+    width: 70%;
+    color: #000;
+    text-align: justify;
+  }
+  p{
+    border-style: none none none solid;
+    border-color: darkred;
+    border-width: 4px;
+    padding-left: 10px;
+    transform: translate(200px, 0);
+    opacity: 0;
+    animation-name: comeToRight, fade;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  .p1{
+    animation-delay: 150ms;
+  }
+  .p2{
+    animation-delay: 300ms;
+  }
+}

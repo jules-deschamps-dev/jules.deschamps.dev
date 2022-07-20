@@ -1,0 +1,144 @@
+.profil-picture-container {
+  width: 100%;
+  background: transparent;
+  text-align: center;
+  .mask-layer {
+    mask-image: url(https://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-position/mask-image.png);
+    mask-size: 100% 100%;
+    mask-position: center;
+    transition: mask-size .3s;
+  }
+  .instamask {
+    margin: 20px auto;
+    text-align: center;
+  }
+  .instamask img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+}
+#profil-picture{
+  width: 180px;
+  margin: 20px;
+  border-radius: 100px;
+}
+
+
+.head-links-container{
+  display: flex;
+  flex-direction: column;
+  .sub-container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.btn{
+  position: relative;
+  display: flex;
+  width: 100px;
+  height : 100px;
+  padding: 10px;
+  padding-bottom: 7px;
+  background : transparent;
+  margin: auto;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.btn:hover{
+  span{
+    color: darkred;
+    z-index: 2;
+  }}
+.btn::before{
+  content: "";
+  margin: auto;
+  display: flex;
+  width: 50%;
+  height: 50%;
+  border-radius: 999px;
+  background: whitesmoke;
+  opacity: .2;
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  transition: all .4s cubic-bezier(.8, 0.2, .7, .2) ;
+  z-index: 1; 
+}
+
+.btn:hover::before{
+  content: "";
+  opacity: 1;
+  width: 100%;
+}
+
+.externals-links-container{
+  display: flex;
+  flex-direction: row;
+  width: 180px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.externals-links-header{
+  display: flex;
+  margin: auto;
+  width: 35px;
+  filter: invert(1) brightness(.8);
+}
+.externals-links-header:hover{
+  filter: invert(1) brightness(1);
+}
+
+
+@keyframes sidebar-showing {
+  from { left: -100vw; }
+  to {left: 0}
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .profil-picture-container{
+    width: min-content;
+  }
+  .head-links-container{
+    margin: auto;
+    .sub-container{
+      flex-direction: row;
+    }
+  }
+  .externals-links-container{
+    flex-direction: column !important;
+    margin: auto !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  head{
+    flex-direction: column !important;
+  }
+  .profil-picture-container{
+    margin: auto;
+    .instamask{
+      margin: 0 !important;
+    }
+  }
+  #profil-picture{
+    margin: auto !important;
+    height: 150px !important;
+    width: 150px !important;
+  }
+  .head-links-container{
+    margin: auto;
+    .sub-container{
+      flex-direction: row;
+    }
+  }
+  .externals-links-container{
+    flex-direction: row !important;
+    margin-bottom: 20px !important;
+  }
+}

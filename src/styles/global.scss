@@ -1,0 +1,106 @@
+
+$bk-color: #f2ecdd;
+
+@font-face{
+	font-family: 'tintin';
+	src : url('../assets/fonts/tintin_talking.ttf');
+}
+@font-face {
+	font-family: '_TINTIN';
+	src : url('../assets/fonts/tintinMAJ.ttf');
+}
+@font-face{
+  font-family: "minecraft";
+  src : url('../assets/fonts/minecraft.ttf')
+}
+@font-face{
+  font-family: "item";
+  src : url('../assets/fonts/Itim-Regular.ttf')
+}
+@font-face{
+  font-family: "capriola";
+  src : url('../assets/fonts/Capriola-Regular.ttf')
+}
+
+a{
+  text-decoration: none;
+}
+
+.margin{
+  margin: auto;
+}
+
+#root{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+}
+
+html{
+  color: aliceblue;
+  font-family: item;
+  body{
+    margin: 0;
+    background: $bk-color;
+    min-width: 100vh;
+    head{
+      font-family: "tintin";
+      display: flex;
+      flex-direction: column;
+      min-width: 240px;
+      height: 100vh;
+      background-color: darkred;
+      animation-name: sidebar-showing;
+      animation-timing-function: steps(25, start);
+      animation-delay: 400ms;
+      animation-fill-mode: forwards;
+      animation-duration: 1200ms;
+      z-index: 1;
+    }
+  }
+  footer{
+    font-family: "minecraft";
+    color: rgb(40,0,0);
+    width: calc(100vw - 240px);
+    left: 240px;
+    height: min-content;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+
+.bk-white{ background-color: white; }
+.bk-grey{ background-color: grey;}
+
+.ft-white{ color: white; }
+.ft-grey{ color: lightgray;}
+.ft-pink{ color: pink;}
+.ft-whitesmoke{ color: whitesmoke; }
+.ft-aliceblue{ color:  aliceblue; }
+.ft-deepskyblue{ color: deepskyblue; }
+.ft-sand{ color: #EDC9AF;}
+
+.txt-center{ text-align: center;}
+
+.italic{ font-style: italic;}
+
+.w100{width: 100%;}
+
+.flex{display: flex;}
+.row{flex-direction: row;}
+.min-content{height: min-content;}
+
+@media screen and (max-width: 768px) {
+  #root{
+    flex-direction: column;
+  }
+  head{
+    flex-direction: row !important;
+    height: min-content !important;
+    width: 100vw !important;
+  }
+}

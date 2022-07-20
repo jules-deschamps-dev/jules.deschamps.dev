@@ -1,0 +1,34 @@
+.foot-container{
+  width: min-content;
+  height: min-content;
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+}
+.hidder{
+  width: 100%;
+  height: 100%;
+  background: $bk-color;
+  position: absolute;
+  right: 0;
+}
+.content{
+  width: max-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hidder{
+  animation-name: typing;
+  animation-timing-function: steps(25, start);
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+  animation-duration: 1200ms;
+}
+
+@keyframes typing {
+  from { width: 100%; }
+  to { width: 0 }
+}
+
+

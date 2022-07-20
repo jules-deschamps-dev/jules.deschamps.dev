@@ -1,0 +1,34 @@
+.domain{
+  color: black;
+  display: flex;
+  flex-direction: row;
+  font-size: 32px;
+  font-family: _TINTIN;
+  margin: auto;
+  .name{
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    animation: rotate3d, fade-speed;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+  }
+  .bubble{
+    display: flex;
+    width: min-content;
+    height: max-content;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  .extension{
+    animation: rotate3d-invert, fade-speed;
+    opacity: 0;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+  }
+  .extension::before{
+    content: ".";
+    color: pink;
+  }
+}

@@ -1,0 +1,62 @@
+@keyframes sidebar-showing {
+  from { width: 0px; }
+  to {width: min-content}
+}
+
+@keyframes fade{
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fade-speed{
+  from {opacity: 0;}
+  20% {opacity: 1;}
+  to {opacity: 1;}
+}
+
+
+@keyframes comeToRight{
+  from {transform: translate(200px, 0);}
+  to {transform: translate(0, 0); }
+}
+@keyframes comeToLeft{
+  from {transform: translate(-200px, 0);}
+  to {transform: translate(0, 0); }
+}
+
+@keyframes bounce {
+  from {width: 120px;}
+  45% {width: 120px;}
+  85% {width: 100px;}
+  to {width: 120px;}
+}
+
+@keyframes bk {
+  from {background: transparent;}
+  to {background: darkred !important;}
+}
+
+@keyframes print-rate-stars {
+  from {
+    width: 0; height: 0px; filter: blur(5px);}
+  to {
+    width: 30px; height: 30px; filter: blur(0);}
+}
+@keyframes print-rate-big-stars {
+  from {
+    width: 0; height: 0px; filter: blur(5px);}
+  to {
+    width: 42px; height: 42px; filter: blur(0);}
+}
+
+@keyframes rotate3d {
+  from {
+    transform: rotate3d(1, 0, 0, 90deg);}
+  to {
+    transform: rotate3d(0, 0,0, 90deg);} 
+}
+@keyframes rotate3d-invert {
+  from {
+    transform: rotate3d(1, 1, 0, -180deg);}
+  to {
+    transform: rotate3d(0, 0, 0, -90deg);} 
+}

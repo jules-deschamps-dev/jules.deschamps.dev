@@ -1,0 +1,51 @@
+.download-container{
+  position: relative;
+  width: 14vw;
+  height: 14vw;
+  margin: auto;
+  .download-icon{
+    position: absolute;
+    width: 100%;
+    animation: download-icon-appear 1.2s;
+  }
+  .download-arrow{
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    top: 20%;
+    filter: invert(1);
+    animation: download-arrow-appear 1.2s;
+  }
+  embed{
+    position:absolute;
+    height: 250%;
+    left: -40%;
+    top: -70%;
+    animation: blur-it 1.2s forwards;
+  }
+}
+
+@keyframes download-icon-appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes download-arrow-appear {
+  from{
+    opacity: 0;
+    transform: translate(0, -30px);
+  }
+  to{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes blur-it {
+  from{
+    filter: blur(0px);
+  }
+  to{
+    filter: blur(2px);
+  }
+}
