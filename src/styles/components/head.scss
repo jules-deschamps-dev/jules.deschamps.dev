@@ -1,5 +1,5 @@
 .profil-picture-container {
-  width: 100%;
+  width: 240px;
   background: transparent;
   text-align: center;
   .mask-layer {
@@ -81,21 +81,25 @@
 .externals-links-container{
   display: flex;
   flex-direction: row;
-  width: 180px;
+  width: 220px;
   margin: auto;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 .externals-links-header{
+  opacity: 1;
   display: flex;
   margin: auto;
   width: 35px;
+  margin: auto;
   box-sizing: border-box;
   border-bottom: solid 2px transparent;
+  filter: invert(1) drop-shadow(1px 1px 1px black);
 
 }
 .externals-links-header:hover{
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
   transition-duration: 350ms;
+  filter: invert(0);
 }
 
 
@@ -107,9 +111,6 @@
 
 
 @media screen and (max-width: 768px) {
-  .profil-picture-container{
-    width: min-content;
-  }
   .head-links-container{
     margin: auto;
     .sub-container{

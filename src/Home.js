@@ -4,7 +4,7 @@ import CV from "./components/CV";
 import Footer from "./components/Footer";
 import Head from "./components/Head";
 import Portfolio from "./components/Portfolio";
-import Skills from "./components/skills/Skills";
+import Skills from "./components/Skills";
 
 const Home = () => {
   const [printSkills, setPrintSkills] = useState(false);

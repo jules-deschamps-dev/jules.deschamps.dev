@@ -43,7 +43,6 @@ a{
   display: flex;
   flex-direction: row;
   width: 100vw;
-  height: 100vh;
 }
 
 html{
@@ -80,6 +79,10 @@ html{
   }
 }
 
+.container{
+  display: flex;
+  margin: auto;
+  min-height: 100vh;}
 
 .bk-white{ background-color: white; }
 .bk-grey{ background-color: grey;}
@@ -115,5 +118,7 @@ html{
     left: 0 !important;
     width: 100vw !important;
     position: inherit !important;
+    transform: translate(0px, -45px) !important;
+    
   }
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 const Bio = () => {
   return (
-    <div className="container">
+    <div id="bio" className="container">
       <div className="bio-paragraph">
         <h1>Jules Deschamps </h1>
         <p>

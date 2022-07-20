@@ -2,10 +2,10 @@ import React from "react";
 
 const CV = () => {
   return (
-    <>
+    <div id="cv" className="container">
       <div className="download-container">
-        <a href="pdf/cv.pdf" download="CV_JULES_DESCHAMPS">
-          <embed src="pdf/Aguado.png"></embed>
+        <a href="pdf/CV.pdf" download="CV_JULES_DESCHAMPS">
+          <embed src="pdf/CV.png" alt="cv" />
           <img
             src="img/icons/cloud.svg"
             alt="download"
@@ -18,7 +18,7 @@ const CV = () => {
           />
         </a>
       </div>
-    </>
+    </div>
   );
 };
 
