@@ -3,7 +3,7 @@
   background: transparent;
   text-align: center;
   .mask-layer {
-    mask-image: url(https://tympanus.net/codrops-playground/assets/images/cssref/properties/mask-position/mask-image.png);
+    mask-image: url("../assets/mask.png");
     mask-size: 100% 100%;
     mask-position: center;
     transition: mask-size .3s;
@@ -23,6 +23,7 @@
   width: 180px;
   margin: 20px;
   border-radius: 100px;
+  cursor: crosshair;
 }
 
 
@@ -41,12 +42,14 @@
   height : 100px;
   padding: 10px;
   padding-bottom: 7px;
+  color: $ft-color-dark;
   background : transparent;
   margin: auto;
   position: relative;
   text-align: center;
   overflow: hidden;
   box-sizing: border-box;
+  cursor: crosshair;
 }
 .btn:hover{
   span{
@@ -80,16 +83,19 @@
   flex-direction: row;
   width: 180px;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .externals-links-header{
   display: flex;
   margin: auto;
   width: 35px;
-  filter: invert(1) brightness(.8);
+  box-sizing: border-box;
+  border-bottom: solid 2px transparent;
+
 }
 .externals-links-header:hover{
-  filter: invert(1) brightness(1);
+  transform: rotate(360deg);
+  transition-duration: 350ms;
 }
 
 

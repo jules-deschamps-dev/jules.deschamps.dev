@@ -19,24 +19,25 @@ const Head = (props) => {
         </div>
       </div>
 
-      <div className="head-links-container">
+      <nav className="head-links-container">
         <div className="sub-container">
-          <div className="btn ft-white" onClick={() => props.setShow("skills")}>
-            <span className="margin txt-center w100">Skills</span>
-          </div>
-          <div
-            className="btn ft-white"
-            onClick={() => props.setShow("portfolio")}
+          <a
+            href="#skills-container"
+            className="btn"
+            onClick={() => props.setShow("skills")}
           >
+            <span className="margin txt-center w100">Skills</span>
+          </a>
+          <a className="btn" onClick={() => props.setShow("portfolio")}>
             <span className="margin txt-center w100">Mes Créations</span>
-          </div>
-          <div className="btn ft-white" onClick={() => props.setShow("cv")}>
+          </a>
+          <div className="btn " onClick={() => props.setShow("cv")}>
             <span className="margin txt-center w100">Curriculum Vitae</span>
           </div>
         </div>
 
         <div className="sub-container"></div>
-      </div>
+      </nav>
 
       <div className="externals-links-container">
         <a

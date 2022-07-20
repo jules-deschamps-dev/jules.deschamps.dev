@@ -1,5 +1,10 @@
 
-$bk-color: #f2ecdd;
+$bk-color: rgb(195, 255, 255);
+$primary-color: coral;
+$secondary-color: #efe6e1;
+$tertiary-color: aliceblue;
+$ft-color-dark: black;
+$ft-color-light: aliceblue;
 
 @font-face{
 	font-family: 'tintin';
@@ -21,6 +26,10 @@ $bk-color: #f2ecdd;
   font-family: "capriola";
   src : url('../assets/fonts/Capriola-Regular.ttf')
 }
+@font-face{
+  font-family: "lato";
+  src : url('../assets/fonts/Lato-Regular.ttf')
+}
 
 a{
   text-decoration: none;
@@ -38,19 +47,20 @@ a{
 }
 
 html{
-  color: aliceblue;
+  background: $tertiary-color;
   font-family: item;
+  scroll-behavior: smooth;
   body{
     margin: 0;
     background: $bk-color;
-    min-width: 100vh;
+    //min-width: 100vh;
     head{
       font-family: "tintin";
       display: flex;
       flex-direction: column;
       min-width: 240px;
       height: 100vh;
-      background-color: darkred;
+      background: linear-gradient(-40deg, #fcfcfc, coral);
       animation-name: sidebar-showing;
       animation-timing-function: steps(25, start);
       animation-delay: 400ms;
@@ -61,14 +71,12 @@ html{
   }
   footer{
     font-family: "minecraft";
-    color: rgb(40,0,0);
+    color: $ft-color-dark;
     width: calc(100vw - 240px);
     left: 240px;
     height: min-content;
-    padding: 10px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
-    z-index: -1;
   }
 }
 
@@ -102,5 +110,10 @@ html{
     flex-direction: row !important;
     height: min-content !important;
     width: 100vw !important;
+  }
+  footer{
+    left: 0 !important;
+    width: 100vw !important;
+    position: inherit !important;
   }
 }

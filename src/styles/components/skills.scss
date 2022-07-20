@@ -1,7 +1,8 @@
-.skills-container{
+#skills-container{
   display: flex;
   font-family: _TINTIN;
   margin: auto;
+  min-height: 100vh;
   .skills-back{
     animation-name: fade;
     animation-delay: 1300ms;
@@ -11,7 +12,42 @@
     margin-top: auto;
     margin-bottom: auto;
     margin: auto;
-    padding: 50px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    li{
+      i{
+        position: absolute;
+        width: min-content;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        text-align: center;
+        span{
+          margin: auto;
+          transform: rotate3d(0, 1, 0, -90deg);
+          &.language{
+            text-decoration: underline;
+            font-style: normal;
+          }
+          &.derivated{
+            font-style: italic;
+          }
+        }
+      }
+    }
+    li:hover img {
+      transform: rotate3d(0, 1, 0, 90deg);
+      transition-duration: .2s;
+      transition-timing-function: linear;
+    } 
+    li:hover span {
+      transform: rotate3d(0, 1, 0, 0deg);
+      transition-delay: .2s;
+      transition-duration: .2s;
+      transition-timing-function: linear;
+    }
     h2{
       opacity: 0;
       text-align: center;
@@ -31,9 +67,10 @@
     display: flex;
     width: 120px;
     height: 120px;
-    background-color: darkred;
+    background-color: $secondary-color;
+    border: $primary-color 2px solid;
+    color: $ft-color-dark;
     border-radius: 50%;
-    color: aliceblue;
     transform: translate(200px);
     list-style-type: none;
     animation-name: comeToRight, bounce, fade;
@@ -46,64 +83,33 @@
     background-position: center;
     background-size: 80%;
     background-repeat: no-repeat;
-    span{
-      text-align: center;
-      width: min-content;
-      height: min-content;
-      opacity: 0;
-      animation: fade .8s forwards 1s;
-    }
-    .rate-container{
-      position: absolute;
-      bottom: 0px;
-      left: 5%;
-      width: 90%;
-      display: flex;
-      .rate-star{
-        margin: auto;
-        width: 0;
-        height: 0;
-        object-position: center;
-        animation: print-rate-stars .3s 1.1s ease forwards;
-      }
-      .rate-big-star{
-        animation: print-rate-big-stars .3s 1.1s ease forwards;
-      }
-      .bottom-star{
-        transform: translate(0, 12px);
-      }
-      .rate-star0{
-        animation-delay: 1100ms;
-      }
-      .rate-star1{
-        animation-delay: 1180ms;
-      }
-      .rate-star2{
-        animation-delay: 1240ms;
-      }
+    overflow: hidden;
+    img{
+      object-fit: contain;
+      height: 90px;
+      max-width: 90px;
+      margin: auto;
+      border-radius: 15px;
     }
   }
+
+
   .li0front{
     animation-delay: 0ms;
-    //background-image: url("../../../src/assets/img/svgs/brands/html5.svg");
-    //background-position: center;
+    background-position: center;
   }
   .li1front{
     animation-delay: 150ms;
-    //background-image: url("../../../src/assets/img/svgs/brands/css3.svg");
   }
   .li2front{
     animation-delay: 300ms;
-    //background-image: url("../../../src/assets/img/svgs/brands/js-square.svg");
   }
   .li3front{
     animation-delay: 450ms;
-    //background-image: url("../../../src/assets/img/svgs/brands/react.svg");
   }
 
   .li0back{
     animation-delay: 600ms;
-    //background-image: url("../../../src/assets/img/svgs/brands/node-js.svg");
   }
   .li1back{
     animation-delay: 750ms;
@@ -111,6 +117,11 @@
   .li2back{
     animation-delay: 900ms;
   }
+}
+
+@keyframes flip {
+  to {transform: rotate3d(0, 1, 0, 0deg) !important;}
+  from {transform: rotate3d(0, 1, 0, 90deg) !important;}
 }
 
 @media screen and (max-width: 768px) {

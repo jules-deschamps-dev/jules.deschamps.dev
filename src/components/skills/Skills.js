@@ -2,16 +2,17 @@ import React from "react";
 import Rate from "./Rate";
 
 const Skills = () => {
+  let path = "./img/icons/";
   let skillsListFront = [
-    { language: "HTML", level: 5 },
-    { language: "CSS", level: 3 },
-    { language: "JS", level: 2 },
-    { language: "React", level: 2 },
+    { language: "HTML", derivated: "JSX", url: "html5.webp" },
+    { language: "CSS", derivated: "Sass", url: "css3.webp" },
+    { language: "JavaScript", url: "js-square.webp" },
+    { language: "React", derivated: "Redux", url: "react.webp" },
   ];
   let skillsListBack = [
-    { language: "NodeJS", level: 2 },
-    { language: "MySQL", level: 1 },
-    { language: "MongoDB", level: 1 },
+    { language: "NodeJS", url: "node.png" },
+    { language: "MySQL", derivated: "Sequelize", url: "mysql.png" },
+    { language: "MongoDB", derivated: "Mongoose", url: "mongodb.png" },
   ];
   let skillsListFuture = [
     { language: "Vue", level: 0 },
@@ -21,15 +22,24 @@ const Skills = () => {
   // Débutant, Initié, Intermediaire, Confirmé
 
   return (
-    <div className="skills-container">
+    <div id="skills-container">
       <ul>
         <h2 className="skill-domain"> Front </h2>
         {skillsListFront.map((element, index) => {
           var className = "skill li" + index + "front";
           return (
             <li className={className} key={index}>
-              <span className="margin"> {element.language} </span>
-              <Rate rate={element.level} />
+              <img src={path + element.url} alt={element.language} />
+              {/*}<span className="margin"> {element.language} </span>{*/}
+              {/*}<Rate rate={element.level} />{*/}
+              <i>
+                <span className="language">{element.language}</span>
+                {element.derivated ? (
+                  <span className="derivated">{element.derivated}</span>
+                ) : (
+                  ""
+                )}
+              </i>
             </li>
           );
         })}
@@ -41,8 +51,15 @@ const Skills = () => {
           var className = "skill li" + index + "back";
           return (
             <li className={className} key={index}>
-              <span className="margin"> {element.language} </span>
-              <Rate rate={element.level} />
+              <img src={path + element.url} alt={element.language} />
+              <i>
+                <span className="language">{element.language}</span>
+                {element.derivated ? (
+                  <span className="derivated">{element.derivated}</span>
+                ) : (
+                  ""
+                )}
+              </i>
             </li>
           );
         })}

@@ -5,7 +5,7 @@ const CV = () => {
     <>
       <div className="download-container">
         <a href="pdf/cv.pdf" download="CV_JULES_DESCHAMPS">
-          <embed src="pdf/cv.webp"></embed>
+          <embed src="pdf/Aguado.png"></embed>
           <img
             src="img/icons/cloud.svg"
             alt="download"

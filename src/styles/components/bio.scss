@@ -1,19 +1,20 @@
 .container{
   display: flex;
   h1{
-    font-family: capriola;
+    font-family: lato;
     animation-name: comeToLeft, fade;
     animation-duration: 1s;
     animation-fill-mode: forwards;
   }
   .bio-paragraph{
+    font-family: lato;
     position: relative;
     display: flex;
     flex-direction: column;
     left: 10%;
     margin: auto;
     margin-left: 0;
-    width: 70%;
+    width: 75%;
     color: #000;
     text-align: justify;
   }

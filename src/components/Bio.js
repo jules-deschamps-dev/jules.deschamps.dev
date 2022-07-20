@@ -4,7 +4,7 @@ const Bio = () => {
   return (
     <div className="container">
       <div className="bio-paragraph">
-        <h1>jules-deschamps.dev</h1>
+        <h1>Jules Deschamps </h1>
         <p>
           Développeur Front-End de 25ans, je suis également formé au Back-End
           sous NodeJS et à la gestion de Base de Données relationnelle et
